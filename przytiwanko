@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: #191919; 
+            margin: 0;
+            display: flex;
+            /* Zmienione na flex-start, żeby wyrównać do lewej */
+            justify-content: flex-start; 
+            align-items: center;
+            height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            overflow: hidden;
+        }
+
+        #greeting {
+            font-size: 19px;
+            font-weight: 500;
+            /* Zmienione na wyrównanie do lewej */
+            text-align: left; 
+            letter-spacing: -0.01em;
+            color: rgba(255, 255, 255, 0.9);
+            /* Dodany odstęp od lewej krawędzi */
+            padding-left: 25px;
+            padding-right: 25px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="greeting">Szukanie taśmy gafer...</div>
+
+<script>
+    const messages = [
+         “hej, dobrej kawusi ☕",
+        “hej, co tam?",
+        “cześć. Dobrze Cię widzieć 👀",
+        “Sloooooooow",
+        “cześć, gotowy na nowe Sploty 😏?",
+        “cześć, co robisz?",
+        "👀",
+        "Elektrownia Powiśle > Fabryka Norblina?",
+        "nie, Fabryka Norblina > Elektrownia Powiśle 😤",
+        “cześć! Pamiętaj, żeby czasem wstać od biurka 🌿",
+        “jednemu wystawcy się nie podoba, że ma daleko do przebieralni",
+        “wszystko w swoim czasie, na spokojnie",
+        “powoli do celu ✨",
+        “hej, fajnie Cię widzieć",
+        “ktoś widział gdzieś przedłużacze?",
+        “hej! Dobrego i spokojnego splotu zdarzeń",
+        “przedłużacze zostały chyba w magazynie",
+        “vintage to nie trend, to stan umysłu",
+        “dobra historia nigdy nie wychodzi z mody",
+        “chyba mamy za dużo małolaty",
+        “musimy jeszcze nagrać zapowiedź",
+    ];
+
+    function setRandomGreeting() {
+        const randomIndex = Math.floor(Math.random() * messages.length);
+        document.getElementById('greeting').innerText = messages[randomIndex];
+    }
+
+    setRandomGreeting();
+</script>
+
+</body>
+</html>
